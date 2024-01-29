@@ -1,6 +1,6 @@
 format_version: 10
 pipelines:
-  prometheus:
+  prometheus-terraform:
     group: tools
     label_template: "${COUNT}"
     materials:
