@@ -28,9 +28,13 @@ scrape_configs:
     static_configs:
       - targets: ["localhost:9090"]
 
-  - job_name: "ec2"
-    static_configs:
-      - targets: ["10.10.2.56:9100", "10.10.1.102:9100"]
-        labels:
-          project: expense
+#   - job_name: "ec2"
+#     static_configs:
+#       - targets: ["10.10.2.56:9100", "10.10.1.102:9100"]
+#         labels:
+#           project: expense
 
+  - job_name: 'ec2'
+    ec2_sd_configs:
+      - region: us-east-1
+        port: 9100
