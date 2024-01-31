@@ -14,6 +14,8 @@ pipelines:
         fetch_materials: true
         jobs:
           apply:
+            approval:
+              type: manual
             timeout: 0
             tasks:
             - exec:
