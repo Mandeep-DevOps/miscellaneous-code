@@ -14,4 +14,5 @@ groups:
       labels:
         severity: critical
       annotations:
-        summary: summary: Memory Used Percentage in Critical State
+        summary: Memory Used Percentage in Critical State
+
