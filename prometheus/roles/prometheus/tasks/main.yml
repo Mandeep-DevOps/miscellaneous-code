@@ -14,6 +14,12 @@
     src: prometheus.yml
     dest: /opt/prometheus-{{ prometheus_version }}.linux-amd64/prometheus.yml
 
+- name: Copy Prometheus Alerts configuration
+  ansible.builtin.template:
+    src: alerts.yml
+    dest: /opt/prometheus-{{ prometheus_version }}.linux-amd64/alerts.yml
+
+
 - name: Start prometheus service
   ansible.builtin.systemd:
     name: prometheus

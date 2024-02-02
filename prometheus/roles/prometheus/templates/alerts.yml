@@ -1,0 +1,17 @@
+groups:
+  - name: SaturationAlerts
+    rules:
+    - alert: MemoryUsedPercentageWarning
+      expr: (1- ((node_memory_MemFree_bytes + node_memory_Buffers_bytes + node_memory_Cached_bytes) / node_memory_MemTotal_bytes)) * 100 > 80
+      for: 1m
+      labels:
+        severity: warning
+      annotations:
+        summary: Memory Used Percentage in Warning State
+    - alert: MemoryUsedPercentageCritical
+      expr: (1- ((node_memory_MemFree_bytes + node_memory_Buffers_bytes + node_memory_Cached_bytes) / node_memory_MemTotal_bytes)) * 100 > 90
+      for: 1m
+      labels:
+        severity: critical
+      annotations:
+        summary: summary: Memory Used Percentage in Critical State
