@@ -2,8 +2,8 @@
 Description=alertmanager
 
 [Service]
-WorkingDirectory=/opt/alertmanager-{{ alertmanager_version }}.linux
-ExecStart=/opt/alertmanager-{{ alertmanager_version }}.linux/alertmanager
+WorkingDirectory=/opt/alertmanager-{{ alertmanager_version }}.linux-amd64
+ExecStart=/opt/alertmanager-{{ alertmanager_version }}.linux-amd64/alertmanager
 
 [Install]
 WantedBy=multi-user.target
