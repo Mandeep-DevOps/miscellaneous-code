@@ -60,7 +60,7 @@
     state: present
     commit_message: Updated by ansible
     overwrite: true
-    path: "{{ lookup('ansible.builtin.template', 'grafana-expense.json') }}"
+    path: "{{ lookup('ansible.builtin.file', 'grafana-expense.json') }}"
 
 - name: Download Alert Manager
   ansible.builtin.unarchive:
