@@ -36,6 +36,10 @@
   register: out
   ignore_errors: true
 
+- name: msg
+  debug:
+    msg: "{{out }}"
+
 - name: Install Grafana
   ansible.builtin.dnf:
     name: https://dl.grafana.com/enterprise/release/grafana-enterprise-10.3.1-1.x86_64.rpm
