@@ -1,0 +1,10 @@
+[Unit]
+Description=alertmanager
+
+[Service]
+WorkingDirectory=/opt/alertmanager-{{ alertmanager_version }}.linux
+ExecStart=/opt/alertmanager-{{ alertmanager_version }}.linux/alertmanager
+
+[Install]
+WantedBy=multi-user.target
+
