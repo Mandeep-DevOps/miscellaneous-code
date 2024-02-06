@@ -53,6 +53,11 @@
     enabled: yes
   when: out.status.ActiveState != "active"
 
+- name: COpy file
+  ansible.builtin.copy:
+    src: grafana-expense.json
+    dest: /tmp/grafana-expense.json
+
 - name: Import Grafana dashboard
   community.grafana.grafana_dashboard:
     grafana_url: http://172.31.39.45:3000
@@ -60,7 +65,7 @@
     state: present
     commit_message: Updated by ansible
     overwrite: true
-    path: "{{ lookup('ansible.builtin.file', 'grafana-expense.json') }}"
+    path: /tmp/grafana-expense.json
 
 - name: Download Alert Manager
   ansible.builtin.unarchive:
