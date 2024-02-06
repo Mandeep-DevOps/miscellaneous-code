@@ -61,7 +61,7 @@
 - name: Import Grafana dashboard
   community.grafana.grafana_dashboard:
     grafana_url: http://172.31.39.45:3000
-    grafana_api_key: glsa_kNF8KxQYCzi9G53pNnaWt7TgfmvS4ixQ_95844bda
+    grafana_api_key: "{{ lookup('amazon.aws.aws_ssm', 'grafana.apikey', region='us-east-1' ) }}"
     state: present
     commit_message: Updated by ansible
     overwrite: true
