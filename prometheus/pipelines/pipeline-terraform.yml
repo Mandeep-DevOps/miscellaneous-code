@@ -9,6 +9,8 @@ pipelines:
         shallow_clone: false
         auto_update: true
         branch: main
+        includes:
+          - src/**/*.*
     stages:
     - apply:
         fetch_materials: true
