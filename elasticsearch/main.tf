@@ -20,6 +20,7 @@ resource "aws_instance" "elasticsearch" {
   subnet_id              = "subnet-045c06bd1fda128d2"
 
   instance_market_options {
+    market_type = "spot"
     spot_options {
       instance_interruption_behavior = "stop"
       spot_instance_type             = "persistent"
