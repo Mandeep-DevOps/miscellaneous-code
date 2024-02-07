@@ -25,4 +25,21 @@
     state: started
     enabled: yes
 
+- name: Install Nginx
+  ansible.builtin.dnf:
+    name: nginx
+    state: installed
+
+- name: Copy Nginx Config file
+  ansible.builtin.template:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
+
+- name: Start Nginx
+  ansible.builtin.systemd_service:
+    name: nginx
+    state: started
+
+
+
 
