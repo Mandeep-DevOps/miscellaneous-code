@@ -41,3 +41,11 @@ resource "aws_route53_record" "elasticsearch" {
   records = [aws_instance.elasticsearch.public_ip]
 }
 
+resource "aws_route53_record" "logstash" {
+  zone_id = "Z09059901XRPHNYMGLMJ4"
+  name    = "logstash"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.elasticsearch.private_ip]
+}
+
