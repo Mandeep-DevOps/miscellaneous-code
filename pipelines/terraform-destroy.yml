@@ -26,5 +26,5 @@ pipelines:
 
             - exec:
                 command: terraform
-                arguments: ["destroy", "-auto-approve", "-target=module.alb"]
+                arguments: ["destroy", "-auto-approve", "-target=module.alb.aws_lb.tools"]
 
