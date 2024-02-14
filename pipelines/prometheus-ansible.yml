@@ -1,0 +1,29 @@
+format_version: 10
+pipelines:
+  prometheus-ansible:
+    group: tools
+    label_template: "${COUNT}"
+    materials:
+      ansible:
+        git: https://github.com/raghudevopsb77/miscellaneous-code
+        shallow_clone: false
+        auto_update: true
+        branch: main
+        includes:
+          - src/**/*.*
+    stages:
+    - apply:
+        fetch_materials: true
+        jobs:
+          apply:
+            approval:
+              type: manual
+            timeout: 0
+            tasks:
+            - exec:
+                command: bash
+                arguments: [ "ansible.sh", "prometheus" ]
+
+
+
+
