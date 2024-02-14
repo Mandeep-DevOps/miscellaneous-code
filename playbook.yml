@@ -1,0 +1,5 @@
+- name: Apply Ansible Code
+  hosts: all
+  become: yes
+  roles:
+    - "{{ tool_name }}"
