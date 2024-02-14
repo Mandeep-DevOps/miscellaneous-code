@@ -44,7 +44,7 @@
   ansible.builtin.dnf:
     name: https://dl.grafana.com/enterprise/release/grafana-enterprise-10.3.1-1.x86_64.rpm
     state: installed
-  when: out.status.ActiveState != "active"
+  when: out.status.ActiveState != "active" or out.status.ActiveState not exists
 
 - name: Start Grafana service
   ansible.builtin.systemd_service:
