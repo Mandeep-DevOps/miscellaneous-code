@@ -21,10 +21,6 @@ pipelines:
             timeout: 0
             tasks:
             - exec:
-                command: terraform
-                arguments: ["init"]
-
-            - exec:
-                command: terraform
-                arguments: ["destroy", "-auto-approve", "-target=module.alb.aws_lb.tools"]
+                command: bash
+                arguments: ["delete-alb.sh"]
 
