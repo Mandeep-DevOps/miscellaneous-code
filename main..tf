@@ -7,6 +7,7 @@ module "ec2" {
   listener_arn  = module.alb.listener
   port          = each.value["port"]
   priority      = each.value["priority"]
+  dns_names     = each.value["dns_names"]
 }
 
 module "alb" {
