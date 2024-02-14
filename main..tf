@@ -5,3 +5,7 @@ module "ec2" {
   instance_type = each.value["instance_type"]
 }
 
+module "alb" {
+  source = "./modules/alb"
+}
+
