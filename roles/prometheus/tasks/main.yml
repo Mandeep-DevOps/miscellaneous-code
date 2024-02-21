@@ -29,34 +29,5 @@
 - name: Wait for port Prometheus Port
   ansible.builtin.shell: sleep 5 ; netstat -lntp | grep 9090
 
-- name: Copy Grafana repo
-  ansible.builtin.template:
-    src: grafana.repo
-    dest: /etc/yum.repos.d/grafana.repo
-
-- name: Install Grafana
-  ansible.builtin.dnf:
-    name: grafana-enterprise
-    state: installed
-
-- name: Start Grafana service
-  ansible.builtin.systemd_service:
-    name: grafana-server
-    state: restarted
-    enabled: yes
-
-- name: COpy file
-  ansible.builtin.copy:
-    src: grafana-expense.json
-    dest: /tmp/grafana-expense.json
-
-- name: Import Grafana dashboard
-  community.grafana.grafana_dashboard:
-    grafana_url: https://grafana.rdevopsb73.online
-    grafana_api_key: "{{ lookup('amazon.aws.aws_ssm', 'grafana.apikey', region='us-east-1' ) }}"
-    state: present
-    commit_message: Updated by ansible
-    overwrite: true
-    path: /tmp/grafana-expense.json
 
 
