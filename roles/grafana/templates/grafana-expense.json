@@ -25,7 +25,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "d43ca73f-cd8c-49bf-b347-2604029604b3"
+        "uid": "d70f0f0c-2858-4c53-900e-b1d9c02766b8"
       },
       "fieldConfig": {
         "defaults": {
@@ -94,7 +94,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "d43ca73f-cd8c-49bf-b347-2604029604b3"
+            "uid": "d70f0f0c-2858-4c53-900e-b1d9c02766b8"
           },
           "editorMode": "code",
           "expr": "up{job=\"ec2\"}",
@@ -110,7 +110,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "d43ca73f-cd8c-49bf-b347-2604029604b3"
+        "uid": "d70f0f0c-2858-4c53-900e-b1d9c02766b8"
       },
       "fieldConfig": {
         "defaults": {
@@ -193,7 +193,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "d43ca73f-cd8c-49bf-b347-2604029604b3"
+            "uid": "d70f0f0c-2858-4c53-900e-b1d9c02766b8"
           },
           "editorMode": "code",
           "expr": "avg by (instance) (100 - (rate(node_cpu_seconds_total{mode=\"idle\"}[1m]) * 100))",
@@ -209,7 +209,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "d43ca73f-cd8c-49bf-b347-2604029604b3"
+        "uid": "d70f0f0c-2858-4c53-900e-b1d9c02766b8"
       },
       "fieldConfig": {
         "defaults": {
@@ -292,7 +292,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "d43ca73f-cd8c-49bf-b347-2604029604b3"
+            "uid": "d70f0f0c-2858-4c53-900e-b1d9c02766b8"
           },
           "editorMode": "code",
           "expr": "(1- ((node_memory_MemFree_bytes + node_memory_Buffers_bytes + node_memory_Cached_bytes) / node_memory_MemTotal_bytes)) * 100",
@@ -308,7 +308,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "d43ca73f-cd8c-49bf-b347-2604029604b3"
+        "uid": "d70f0f0c-2858-4c53-900e-b1d9c02766b8"
       },
       "fieldConfig": {
         "defaults": {
@@ -390,7 +390,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "d43ca73f-cd8c-49bf-b347-2604029604b3"
+            "uid": "d70f0f0c-2858-4c53-900e-b1d9c02766b8"
           },
           "editorMode": "code",
           "expr": "increase(node_ethtool_pps_allowance_exceeded[5m])",
@@ -406,7 +406,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "d43ca73f-cd8c-49bf-b347-2604029604b3"
+        "uid": "d70f0f0c-2858-4c53-900e-b1d9c02766b8"
       },
       "fieldConfig": {
         "defaults": {
@@ -475,7 +475,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "d43ca73f-cd8c-49bf-b347-2604029604b3"
+            "uid": "d70f0f0c-2858-4c53-900e-b1d9c02766b8"
           },
           "editorMode": "code",
           "expr": "node_systemd_unit_state{exported_name=\"nginx.service\", state=\"active\"}",
@@ -487,7 +487,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "d43ca73f-cd8c-49bf-b347-2604029604b3"
+            "uid": "d70f0f0c-2858-4c53-900e-b1d9c02766b8"
           },
           "editorMode": "code",
           "expr": "node_systemd_unit_state{exported_name=\"backend.service\", state=\"active\"}",
