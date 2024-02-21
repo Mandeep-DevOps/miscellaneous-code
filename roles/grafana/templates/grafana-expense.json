@@ -99,7 +99,7 @@
           "editorMode": "code",
           "expr": "up{job=\"ec2\"}",
           "instant": false,
-          "legendFormat": "{{name}}",
+          "legendFormat": {% raw %}"{{name}}",{% endraw %}
           "range": true,
           "refId": "A"
         }
@@ -480,7 +480,7 @@
           "editorMode": "code",
           "expr": "node_systemd_unit_state{exported_name=\"nginx.service\", state=\"active\"}",
           "instant": false,
-          "legendFormat": "{{exported_name}}",
+          "legendFormat": {% raw %}"{{exported_name}}",{% endraw %}
           "range": true,
           "refId": "A"
         },
@@ -493,7 +493,7 @@
           "expr": "node_systemd_unit_state{exported_name=\"backend.service\", state=\"active\"}",
           "hide": false,
           "instant": false,
-          "legendFormat": "{{exported_name}}",
+          "legendFormat": {% raw %}"{{exported_name}}",{% endraw %}
           "range": true,
           "refId": "B"
         }
