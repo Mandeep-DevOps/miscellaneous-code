@@ -109,6 +109,6 @@ resource "aws_iam_policy" "main" {
 resource "aws_iam_role_policy_attachment" "attach" {
   count      = length(var.policy_list)
   policy_arn = aws_iam_policy.main[0].arn
-  role       = aws_iam_role.main.arn
+  role       = aws_iam_role.main.name
 }
 
