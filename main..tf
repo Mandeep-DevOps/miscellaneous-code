@@ -13,4 +13,3 @@ module "ec2" {
 module "alb" {
   source = "./modules/alb"
 }
-
