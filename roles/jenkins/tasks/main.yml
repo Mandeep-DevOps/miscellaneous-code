@@ -1,7 +1,7 @@
 - name: Copy Jenkins Repo file
   ansible.builtin.template:
     src: jenkins.repo
-    dest: /etc/yum.repos.d/jenkins
+    dest: /etc/yum.repos.d/jenkins.repo
 
 - name: Install Jenkins
   ansible.builtin.dnf:
