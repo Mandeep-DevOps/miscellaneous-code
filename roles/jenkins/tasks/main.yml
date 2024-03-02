@@ -4,7 +4,7 @@
     dest: /etc/yum.repos.d/jenkins
 
 - name: Install Jenkins
-  ansible.builtin.dbf:
+  ansible.builtin.dnf:
     name:
       - fontconfig
       - java-17-openjdk
