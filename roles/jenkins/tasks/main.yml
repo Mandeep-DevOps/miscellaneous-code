@@ -26,4 +26,10 @@
     user: admin
   loop:
     - frontend
+    - catalogue
+    - cart
+    - user
+    - payment
+    - shipping
+    - expense
 
