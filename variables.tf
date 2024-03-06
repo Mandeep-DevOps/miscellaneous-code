@@ -19,7 +19,7 @@ variable "tools" {
       instance_type = "t3.small"
       port          = 9090
       priority      = 102
-      policy_list   = [ "ec2:Describe*" ]
+      policy_list   = ["ec2:Describe*"]
     }
 
     grafana = {
