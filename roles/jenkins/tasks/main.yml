@@ -32,4 +32,5 @@
     - payment
     - shipping
     - dispatch
+    - parameter-store-init-container-image
 
