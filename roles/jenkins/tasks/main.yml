@@ -33,4 +33,5 @@
     - shipping
     - dispatch
     - parameter-store-init-container-image
+    - schema-loader
 
