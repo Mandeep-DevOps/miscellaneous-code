@@ -15,26 +15,26 @@ variable "tools" {
       policy_list   = []
     }
 
-    prometheus = {
-      instance_type = "t3.small"
-      port          = 9090
-      priority      = 102
-      policy_list   = ["ec2:Describe*"]
-    }
+#    prometheus = {
+#      instance_type = "t3.small"
+#      port          = 9090
+#      priority      = 102
+#      policy_list   = ["ec2:Describe*"]
+#    }
 
-    grafana = {
-      instance_type = "t3.small"
-      port          = 3000
-      priority      = 103
-      policy_list   = []
-    }
+#    grafana = {
+#      instance_type = "t3.small"
+#      port          = 3000
+#      priority      = 103
+#      policy_list   = []
+#    }
 
-    alertmanager = {
-      instance_type = "t3.small"
-      port          = 9093
-      priority      = 104
-      policy_list   = []
-    }
+#    alertmanager = {
+#      instance_type = "t3.small"
+#      port          = 9093
+#      priority      = 104
+#      policy_list   = []
+#    }
 
     artifactory = {
       instance_type = "t3.medium"
