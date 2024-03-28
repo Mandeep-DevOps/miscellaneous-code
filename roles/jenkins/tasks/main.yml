@@ -17,9 +17,27 @@
     state: started
     enabled: yes
 
-- name: Create Job
+# - name: Create Job
+#   community.general.jenkins_job:
+#     config: "{{ lookup('template', 'templates/pipeline.xml') }}"
+#     name: "{{item}}"
+#     password: admin123
+#     url: http://jenkins-int.rdevopsb73.online:8080
+#     user: admin
+#   loop:
+#     - frontend
+#     - catalogue
+#     - cart
+#     - user
+#     - payment
+#     - shipping
+#     - dispatch
+#     - parameter-store-init-container-image
+#     - schema-loader
+
+- name: Create Multi Branch Pipeline Jobs
   community.general.jenkins_job:
-    config: "{{ lookup('template', 'templates/pipeline.xml') }}"
+    config: "{{ lookup('template', 'templates/multibranch.xml') }}"
     name: "{{item}}"
     password: admin123
     url: http://jenkins-int.rdevopsb73.online:8080
@@ -31,7 +49,3 @@
     - user
     - payment
     - shipping
-    - dispatch
-    - parameter-store-init-container-image
-    - schema-loader
-

@@ -1,0 +1,58 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject plugin="workflow-multibranch@773.vc4fe1378f1d5">
+    <actions/>
+    <description>{{item}} CI JOb</description>
+    <displayName>{{item}}</displayName>
+    <properties/>
+    <folderViews class="jenkins.branch.MultiBranchProjectViewHolder" plugin="branch-api@2.1152.v6f101e97dd77">
+        <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject" reference="../.."/>
+    </folderViews>
+    <healthMetrics/>
+    <icon class="jenkins.branch.MetadataActionFolderIcon" plugin="branch-api@2.1152.v6f101e97dd77">
+        <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject" reference="../.."/>
+    </icon>
+    <orphanedItemStrategy class="com.cloudbees.hudson.plugins.folder.computed.DefaultOrphanedItemStrategy" plugin="cloudbees-folder@6.901.vb_4c7a_da_75da_3">
+        <pruneDeadBranches>true</pruneDeadBranches>
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>-1</numToKeep>
+        <abortBuilds>false</abortBuilds>
+    </orphanedItemStrategy>
+    <triggers>
+        <com.igalg.jenkins.plugins.mswt.trigger.ComputedFolderWebHookTrigger plugin="multibranch-scan-webhook-trigger@1.0.11">
+            <spec></spec>
+            <token>{{item}}</token>
+        </com.igalg.jenkins.plugins.mswt.trigger.ComputedFolderWebHookTrigger>
+    </triggers>
+    <disabled>false</disabled>
+    <sources class="jenkins.branch.MultiBranchProject$BranchSourceList" plugin="branch-api@2.1152.v6f101e97dd77">
+        <data>
+            <jenkins.branch.BranchSource>
+                <source class="org.jenkinsci.plugins.github_branch_source.GitHubSCMSource" plugin="github-branch-source@1785.v99802b_69816c">
+                    <id>112e0f0f-9632-4e9b-b57f-6707fa81cd53</id>
+                    <apiUri>https://api.github.com</apiUri>
+                    <credentialsId>TOKEN</credentialsId>
+                    <repoOwner>raghudevopsb77</repoOwner>
+                    <repository>{{item}}</repository>
+                    <repositoryUrl>https://github.com/raghudevopsb77/{{item}}</repositoryUrl>
+                    <traits>
+                        <org.jenkinsci.plugins.github__branch__source.BranchDiscoveryTrait>
+                            <strategyId>3</strategyId>
+                        </org.jenkinsci.plugins.github__branch__source.BranchDiscoveryTrait>
+                        <org.jenkinsci.plugins.github__branch__source.OriginPullRequestDiscoveryTrait>
+                            <strategyId>1</strategyId>
+                        </org.jenkinsci.plugins.github__branch__source.OriginPullRequestDiscoveryTrait>
+                        <org.jenkinsci.plugins.github__branch__source.TagDiscoveryTrait/>
+                    </traits>
+                </source>
+                <strategy class="jenkins.branch.DefaultBranchPropertyStrategy">
+                    <properties class="empty-list"/>
+                </strategy>
+            </jenkins.branch.BranchSource>
+        </data>
+        <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject" reference="../.."/>
+    </sources>
+    <factory class="org.jenkinsci.plugins.workflow.multibranch.WorkflowBranchProjectFactory">
+        <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject" reference="../.."/>
+        <scriptPath>Jenkinsfile</scriptPath>
+    </factory>
+</org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject>
